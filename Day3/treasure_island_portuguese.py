@@ -43,7 +43,7 @@ if intersection_choice.lower() == "esquerda":
             "\n *******************************************************************************"
         )
         door_choice = input(
-            "\n Depois de alguns minutos você percebe um pequeno barco de madeira vindo em sua direção, o barco, embora vazio, parece estar de alguma forma sendo conduzido ate voce. Ao entrar no barco você percebe que ele não tem nenhum tipo de remo e nem mesmo motor, mas mesmo assim ele começa a andar sobre a agua atravessando o lago e te deixa do outro lado onde você se depara com uma grande estrutura de pedra com 3 esculturas portas, uma *vermelha*, uma *amarela* e uma *azul* qual você escolhe? "
+            "\n Depois de alguns minutos você percebe um pequeno barco de madeira vindo em sua direção, o barco, embora vazio, parece estar de alguma forma sendo conduzido ate voce. Ao entrar no barco você percebe que ele não tem nenhum tipo de remo e nem mesmo motor, mas mesmo assim ele começa a andar sobre a agua atravessando o lago e te deixa do outro lado onde você se depara com uma grande estrutura de pedra com 3 portas esculpidas, uma *vermelha*, uma *amarela* e uma *azul* qual você escolhe? "
         )
 
         if door_choice.lower() == "vermelha":
@@ -58,7 +58,7 @@ if intersection_choice.lower() == "esquerda":
                 "\n *******************************************************************************"
             )
             print(
-                "\n Entering the door, a large room lights up revealing a large treasure chest in the middle of the room. \n YOU WIN!!!!!"
+                "\n Ao entrar pela porta, uma grande sala se ilumina revelando um grande baú de tesouro no centro da sala. \n VOCE GANHOU!!!!!"
             )
         elif door_choice.lower() == "azul":
             print(
