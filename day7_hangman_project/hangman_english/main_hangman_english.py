@@ -1,6 +1,6 @@
 import random
-from day7.hangman_english.hangman_images import stages, logo
-from day7.hangman_english.hangman_words import word_list
+from hangman_images import stages, logo
+from hangman_words import word_list
 
 end_of_game = False
 chosen_word = random.choice(word_list)
