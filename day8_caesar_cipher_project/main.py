@@ -67,8 +67,8 @@ def caesar(chosen_direction, user_text, shift_amount):
             if char == alphabet[alphabet.index(char)]:
                 if chosen_direction == "encode":
                     final_text += alphabet[alphabet.index(char) + shift_amount]
-            if chosen_direction == "decode":
-                final_text += alphabet[alphabet.index(char) - shift_amount]
+                if chosen_direction == "decode":
+                    final_text += alphabet[alphabet.index(char) - shift_amount]
         else:
             final_text += char
 
