@@ -60,6 +60,9 @@ print(logo)
 
 
 def caesar(chosen_direction, user_text, shift_amount):
+    """
+    Encode or decode a piece of text, basead in the direction that was given
+    """
     final_text = ""
 
     for char in user_text:
