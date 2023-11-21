@@ -24,8 +24,3 @@ while is_on:
         if coffee_maker.is_resource_sufficient(order) and coin_machine.make_payment(order.cost):
             coffee_maker.make_coffee(order)
             print(f"Here is your {order}. Enjoy!")
-
-
-
-
-
