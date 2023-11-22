@@ -3,28 +3,26 @@ import random
 
 
 def change_color(turtle):
-    r = random.random()
-    g = random.random()
-    b = random.random()
+    r = random.randint(0, 255)
+    g = random.randint(0, 255)
+    b = random.randint(0, 255)
 
     turtle.color(r, g, b)
 
 
-def turn(turtle):
-    key = random.randint(1, 2)
-    if key == 1:
-        turtle.right(90)
-    else:
-        turtle.right(90)
+def random_walk(turtle):
+    directions = [0, 90, 180, 270]
+    for _ in range(random.randint(100, 200)):
+        turtle.forward(30)
+        turtle.setheading(random.choice(directions))
+        change_color(turtle)
 
 
 nova_the_turtle = t.Turtle()
+nova_the_turtle.pensize(5)
+nova_the_turtle.speed(10)
 
-for _ in range(random.randint(10, 100)):
-
-    nova_the_turtle.forward(random.randint(10, 100))
-    turn(nova_the_turtle)
-    change_color(nova_the_turtle)
+random_walk(nova_the_turtle)
 
 my_screen = t.Screen()
 my_screen.exitonclick()
