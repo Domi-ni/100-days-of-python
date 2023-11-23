@@ -40,6 +40,7 @@ eny_turtle.speed(10)
 eny_turtle.hideturtle()
 
 set_to_initial_location(eny_turtle)
+
 for _ in range(10):
     for __ in range(10):
         eny_turtle.dot(20, change_dot_colors(eny_turtle))
