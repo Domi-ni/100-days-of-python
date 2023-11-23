@@ -1,6 +1,8 @@
 import turtle as t
 import random
 
+t.colormode(255)
+
 
 def change_color(turtle):
     r = random.randint(0, 255)
