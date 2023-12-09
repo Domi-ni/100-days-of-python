@@ -15,7 +15,7 @@ with open("./weather_data.csv") as csv_data_file:
 #working with pandas
 
 import pandas
-data = pandas.read_csv("./weather_data.csv")
+data = pandas.read_csv("weather_data.csv")
 print(data)
 print("\n")
 print(data["temp"])
