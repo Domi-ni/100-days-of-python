@@ -3,6 +3,7 @@ from tkinter import *
 window = Tk()
 window.title("My first Tkinter GUI program")
 window.minsize(width=500, height=300)
+window.config(padx=20, pady=20)
 
 new_label = Label(text="I am a label", font=("Arial", 15, "bold"))
 new_label.grid(column=0, row=0)
