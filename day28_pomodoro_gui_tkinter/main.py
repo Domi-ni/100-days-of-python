@@ -1,4 +1,5 @@
 from tkinter import *
+from tkinter import messagebox
 import math
 
 # ---------------------------- CONSTANTS ------------------------------- #
@@ -13,12 +14,11 @@ LONG_BREAK_MIN = 20
 reps = 0
 timer = None
 
-
-
 # ---------------------------- TIMER RESET ------------------------------- #
 
 
 def reset_timer():
+
     global reps
     window.after_cancel(timer)
     title_label.config(text="Timer", fg=GREEN)
@@ -30,19 +30,26 @@ def reset_timer():
 
 
 def start():
+    count_min = "00"  # count / 60
+    count_sec = 25
     global reps
     if reps == 7:
         title_label.config(text="Break", fg=RED)
+        messagebox.showinfo(title="BREAK", message="Hey, is time for  break")
         reps += 1
-        countdown(LONG_BREAK_MIN*60)
+        countdown(LONG_BREAK_MIN * 60)
+
     elif reps % 2 == 0:
         title_label.config(text="Work", fg=GREEN)
+        messagebox.showinfo(title="Work Time", message=f"Let's work")
         reps += 1
-        countdown(WORK_MIN*60)
+        countdown(WORK_MIN * 60)
+
     else:
         title_label.config(text="Break", fg=PINK)
+        messagebox.showinfo(title="BREAK", message=f"Hey, is time for  break")
         reps += 1
-        countdown(SHORT_BREAK_MIN*60)
+        countdown(SHORT_BREAK_MIN * 60)
 
 
 # ---------------------------- COUNTDOWN MECHANISM ------------------------------- #
@@ -60,10 +67,9 @@ def countdown(count):
     if count == 0:
         start()
         if reps % 2 == 0:
-            mark =[]
+            mark = []
             mark += "✔"
             check_marks.config(text=mark)
-
 
 # ---------------------------- UI SETUP ------------------------------- #
 
